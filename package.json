@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@roots/bud": "6.6.9",
-    "@roots/bud-sass": "^6.6.10",
+    "@roots/bud-sass": "6.6.9",
     "@roots/sage": "6.6.9"
   },
   "dependencies": {}
