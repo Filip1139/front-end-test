@@ -1,9 +1,9 @@
 .o-h1 {
-    @media (--from-md) {
-        font-size: var(--typo-50);
-    }
-
-    font-size: 3.2rem;
+    font-size: 2.125rem;
     font-weight: 700;
     line-height: 1.4;
+
+    @include media(md) {
+        font-size: var(--typo-50);
+    }
 }
