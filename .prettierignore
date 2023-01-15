@@ -1,0 +1,9 @@
+package.json
+yarn.lock
+
+dist
+mysite
+vendor
+src/css
+src/static
+src/scripts/vendor/**/*.js

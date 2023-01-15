@@ -1,0 +1,7 @@
+.c-header {
+    padding-top: 2rem;
+
+    @include media(md) {
+        padding-top: 3.5rem;
+    }
+}
