@@ -109,6 +109,13 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    // Add theme support for Custom Logo.
+	add_theme_support( 'custom-logo', array(
+		'width'       => 150,
+		'height'      => 30,
+		'flex-width'  => true,
+	) );
 }, 20);
 
 /**
