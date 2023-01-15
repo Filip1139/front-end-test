@@ -1,22 +1,22 @@
 .u-grid {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: var(--gutter);
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: var(--gutter);
 }
 
 .u-grid--full-width {
-  grid-template-columns:
-    minmax(var(--container-padding), 1fr) repeat(
-      12,
-      minmax(
-        auto,
-        calc(
-          (
-              (var(--container-max-width) - (var(--container-padding) * 2)) -
-                ((12 - 1) * var(--gutter))
-            ) / 12
+    grid-template-columns:
+        minmax(var(--container-padding), 1fr) repeat(
+            12,
+            minmax(
+                auto,
+                calc(
+                    (
+                        (var(--container-max-width) - (var(--container-padding) * 2)) -
+                        ((12 - 1) * var(--gutter))
+                    ) / 12
+                )
+            )
         )
-      )
-    )
-    minmax(var(--container-padding), 1fr);
+        minmax(var(--container-padding), 1fr);
 }

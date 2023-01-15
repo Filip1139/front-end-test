@@ -1,16 +1,19 @@
 [data-fade-in] {
-  --offset-y: 2.4rem;
+    --offset-y: 2.4rem;
 
-  transform: translate3d(var(--offset-x, 0), var(--offset-y), 0);
-  opacity: 0;
+    @include transition;
 
-  @include transition;
-  transition-property: opacity, transform;
+    will-change: opacity, transform;
 
-  will-change: opacity, transform;
+    transform: translate3d(var(--offset-x, 0), var(--offset-y), 0);
 
-  &.is-animated {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+    opacity: 0;
+
+    transition-property: opacity, transform;
+
+    &.is-animated {
+        transform: translate3d(0, 0, 0);
+
+        opacity: 1;
+    }
 }
