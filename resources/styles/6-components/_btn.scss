@@ -10,7 +10,7 @@
     font-size: var(--typo-16);
     font-weight: 700;
 
-    border-radius: .625rem;
+    border-radius: var(--radius-base);
 
     @include media(md) {
         height: 3.75rem;
@@ -35,5 +35,5 @@
 
     background: rgb(0 255 0 / 40%);
     filter: blur(1.625rem);
-    border-radius: .625rem;
+    border-radius: var(--radius-base);
 }
