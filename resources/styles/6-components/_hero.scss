@@ -1,0 +1,54 @@
+.c-hero {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 5rem;
+
+    @include media(lg) {
+        flex-direction: row;
+
+        padding-top: 7.875rem;
+    }
+}
+
+.c-hero__text-content {
+    // flex-shrink: 0;
+
+    width: min(100%, 34.75rem);
+    margin-bottom: 2rem;
+
+    @include media(md) {
+        margin-bottom: 6rem;
+    }
+
+    @include media(xl) {
+        margin-bottom: 0;
+    }
+}
+
+.c-hero__desc + .c-hero__action {
+    margin-top: 2.25rem;
+
+    @include media(md) {
+        margin-top: 3.125rem;
+    }
+}
+
+.c-hero__media {
+    flex-grow: 1;
+}
+
+.c-hero__picture {
+    @include media(lg) {
+        position: absolute;
+        top: -1.25rem;
+        left: 2.5rem;
+
+        aspect-ratio: 1.6;
+    }
+}
+
+.c-hero__img {
+    width: 100%;
+    max-width: 100%;
+}

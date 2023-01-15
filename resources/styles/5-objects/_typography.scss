@@ -1,55 +1,9 @@
 .o-h1 {
-  font-size: 3.2rem;
+    font-size: 2.125rem;
+    font-weight: 700;
+    line-height: 1.4;
 
-  font-size: var(--typo-53);
-  font-weight: 700;
-  line-height: 1.25;
-
-  @media (--from-md) {
-    font-size: var(--typo-80);
-  }
-}
-
-.o-h2 {
-  font-size: var(--typo-53);
-  font-weight: 700;
-  line-height: 1.132;
-}
-
-.o-h3 {
-  font-size: 3.3rem;
-  line-height: 1.33;
-}
-
-.o-h4 {
-  font-size: 2.4rem;
-  line-height: 1.33;
-}
-
-.o-h5 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.7rem;
-  letter-spacing: 0.07rem;
-  text-transform: uppercase;
-
-  @media (--from-md) {
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    letter-spacing: 0.15rem;
-  }
-}
-
-.o-h6 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.7rem;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-
-.o-section-title {
-  margin-bottom: 3rem;
-  font-size: var(--typo-16);
-  text-transform: uppercase;
+    @include media(md) {
+        font-size: var(--typo-50);
+    }
 }

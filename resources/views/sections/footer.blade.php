@@ -1,3 +1,10 @@
-<footer class="content-info">
-  @php(dynamic_sidebar('sidebar-footer'))
+<footer class="o-footer">
+  <div class="o-container">
+      <div class="c-footer">
+
+
+      </div>
+
+  </div>
+
 </footer>

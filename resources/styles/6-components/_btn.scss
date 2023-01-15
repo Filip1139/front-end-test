@@ -1,0 +1,39 @@
+.c-btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 4rem;
+
+    font-size: var(--typo-16);
+    font-weight: 700;
+
+    border-radius: .625rem;
+
+    @include media(md) {
+        height: 3.75rem;
+        padding: 1.125rem 4.875rem;
+    }
+}
+
+.c-btn--primary {
+    background-color: var(--green-1);
+}
+
+.c-btn--primary::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, 40%);
+
+    width: 85%;
+    height: 85%;
+
+    background: rgb(0 255 0 / 40%);
+    filter: blur(1.625rem);
+    border-radius: .625rem;
+}
