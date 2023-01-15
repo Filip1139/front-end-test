@@ -1,0 +1,10 @@
+.o-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.o-container--fluid {
+  max-width: none;
+}
