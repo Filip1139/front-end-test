@@ -23,5 +23,7 @@
     "@roots/bud-sass": "6.6.9",
     "@roots/sage": "6.6.9"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }

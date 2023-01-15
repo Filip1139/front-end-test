@@ -1,0 +1,26 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; /* stylelint-disable-line */
+  text-rendering: optimizelegibility;
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--black-1);
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.sr-only {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
