@@ -1,0 +1,27 @@
+.c-stats {
+    margin-bottom: 6.875rem;
+
+    border-radius: var(--radius-base);
+    box-shadow: 0 61px 66px -10px rgb(13 16 37 / 6%);
+}
+
+.c-stats__list {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: column;
+
+    @include media(md) {
+        flex-direction: row;
+    }
+}
+
+.c-stats__list-item {
+    position: relative;
+
+    @include media(md) {
+        flex: 1 1 100%;
+
+        padding: 3.375rem 0  1.25rem;
+    }
+}

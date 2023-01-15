@@ -1,0 +1,58 @@
+.c-media-text {
+    position: relative;
+
+    display: flex;
+
+    padding: 2.125rem 2.5rem;
+
+    @include media(xl) {
+        padding: 2.125rem 5.625rem;
+    }
+}
+
+.c-media-text__img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.c-media-text__media {
+    flex-shrink: 0;
+
+    margin-right: 1.25rem;
+
+    @include media(lg) {
+        margin-right: 2.25rem;
+    }
+}
+
+.c-media-text__heading {
+    margin-bottom: .25rem;
+
+    font-size: var(--typo-25);
+    line-height: 1;
+    color: var(--dark-blue-1);
+}
+
+.c-stats__list-item:not(:last-child) .c-media-text::after {
+    content: '';
+
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translateX(50%);
+
+    width: min(60%, 10rem);
+    height: 1px;
+
+    background-color: var(--light-grey-1);
+
+    @include media(md) {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        transform: translate(0);
+
+        width: 1px;
+        height: 100%;
+    }
+}
