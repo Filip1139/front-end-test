@@ -1,20 +1,26 @@
 .c-btn {
+    @include transition;
+
     position: relative;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    padding: 1rem 4rem;
+    height: 3.125rem;
+    padding: 0 4rem;
 
     font-size: var(--typo-16);
     font-weight: 700;
 
+    border: 2px solid transparent;
     border-radius: var(--radius-base);
+
+    transition-property: background-color, color, border-color;
 
     @include media(md) {
         height: 3.75rem;
-        padding: 1.125rem 4.875rem;
+        padding: 0 4.875rem;
     }
 }
 
@@ -36,4 +42,26 @@
     background: rgb(0 255 0 / 40%);
     filter: blur(1.625rem);
     border-radius: var(--radius-base);
+}
+
+button.c-btn {
+    cursor: pointer;
+
+    outline: none;
+}
+
+.c-btn--secondary {
+    height: 2.8125rem;
+
+    color: var(--green-2);
+
+    background-color: transparent;
+    border-color: var(--green-1);
+    border-radius: var(--radius-lg);
+}
+
+.is-active .c-btn--secondary {
+    color: var(--dark-blue-1);
+
+    background-color: var(--green-1);
 }

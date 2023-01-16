@@ -21,9 +21,8 @@
     --light-grey-3: #F8F8F8;
     --light-grey-4: #AFB5C0;
     --grey-1: #4F5665;
-    --dark-blue-1:
-        #0B132A
-        --black-1: #000000;
+    --dark-blue-1: #0B132A;
+    --black-1: #000000;
     --white-1: #FFFFFF;
     --green-1: #00FF00;
     --green-rgb-1: 0, 255, 0;
@@ -39,6 +38,7 @@
 
     /** Typo */
     --typo-50: 3.125rem;
+    --typo-44: 2.75rem;
     --typo-35: 2.1875rem;
     --typo-25: 1.5625rem;
     --typo-20: 1.25rem;
@@ -46,6 +46,8 @@
     --typo-16: 1rem;
     --typo-14: .875rem;
     --radius-base: .625rem;
+    --radius-md: 1.25rem;
+    --radius-lg: 3.125rem;
 
     /** Other */
     --container-max-width: 71.25rem;

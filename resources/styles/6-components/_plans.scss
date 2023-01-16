@@ -1,0 +1,30 @@
+.c-plans {
+    margin-bottom: 8.125rem;
+}
+
+.c-plans__list {
+    display: grid;
+    gap: 1.5rem;
+
+    @include media(lg) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2.5rem;
+    }
+}
+
+.c-plans__header {
+    width: min(100%, 34.75rem);
+    margin: 0 auto;
+    margin-bottom: 3.75rem;
+
+    line-height: 30px;
+}
+
+.c-plans__list-item {
+    width: min(100%, 31.25rem);
+    margin: 0 auto;
+}
+
+.c-plans__heading {
+    margin-bottom: 1.25rem;
+}

@@ -1,9 +1,16 @@
 .o-h1 {
-    font-size: 2.125rem;
+    font-size: var(--typo-44);
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.1;
 
     @include media(md) {
         font-size: var(--typo-50);
+        line-height: 1.4;
     }
+}
+
+.o-h2 {
+    font-size: var(--typo-35);
+    font-weight: 500;
+    line-height: 1.4;
 }
