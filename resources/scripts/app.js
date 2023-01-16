@@ -1,10 +1,11 @@
 import domReady from '@roots/sage/client/dom-ready';
+import {Plans} from './modules/plans.js';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  Plans.init();
 });
 
 /**

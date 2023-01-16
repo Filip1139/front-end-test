@@ -1,0 +1,24 @@
+.c-list {
+    font-size: var(--typo-14);
+}
+
+.c-list--checkmarks .c-list__item {
+    position: relative;
+
+    padding-left: 2.75rem;
+}
+
+.c-list--checkmarks .c-list__item::before {
+    content: '';
+
+    position: absolute;
+    top: .2em;
+    left: 0;
+
+    display: inline-block;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background: url('../../images/icons/checkmark.svg') no-repeat center center;
+}

@@ -1,8 +1,12 @@
 .c-stats {
-    margin-bottom: 6.875rem;
+    margin-bottom: 4.375rem;
 
     border-radius: var(--radius-base);
-    box-shadow: 0 61px 66px -10px rgb(13 16 37 / 6%);
+    box-shadow: 0 3.75rem 4.125rem -.625rem rgb(13 16 37 / 6%);
+
+    @include media(md) {
+        margin-bottom: 6.875rem;
+    }
 }
 
 .c-stats__list {
