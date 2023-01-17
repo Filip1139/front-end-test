@@ -1,0 +1,11 @@
+.c-socials {
+    display: inline-flex;
+}
+
+.c-socials__item:not(:last-child) {
+    margin-right: 1.25rem;
+}
+
+.c-social-icon {
+    filter: drop-shadow(0 .75rem 1.125rem rgb(17 19 35 / 20%));
+}

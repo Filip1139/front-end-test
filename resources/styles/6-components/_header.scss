@@ -1,4 +1,8 @@
 .c-header {
+    display: inline-flex;
+    justify-content: space-between;
+
+    width: 100%;
     padding-top: 2rem;
 
     @include media(md) {
