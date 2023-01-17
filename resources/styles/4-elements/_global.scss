@@ -1,0 +1,33 @@
+body {
+    font-family: var(--primary-font);
+    font-size: var(--typo-16);
+    color: var(--dark-blue-1);
+    text-rendering: optimizelegibility;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* stylelint-disable-next-line property-no-unknown */
+    font-smoothing: antialiased;
+}
+
+.sr-only {
+    position: absolute;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+ul {
+    @include list-reset;
+}

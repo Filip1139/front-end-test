@@ -1,10 +1,15 @@
 import domReady from '@roots/sage/client/dom-ready';
+import { Animations } from './modules/animations.js';
+import {Plans} from './modules/plans.js';
+
+
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  Animations.init()
+  Plans.init();
 });
 
 /**

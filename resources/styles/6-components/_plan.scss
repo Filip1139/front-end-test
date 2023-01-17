@@ -1,0 +1,67 @@
+.c-plan {
+    @include transition;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    padding: 3.125rem 2.375rem;
+
+    background-color: var(--white-1);
+    border: .125rem solid var(--light-grey-2);
+    border-radius: var(--radius-base);
+
+    transition-property: border, transform, box-shadow;
+
+    @include media(md) {
+        padding: 5rem 2.375rem 3.125rem;
+    }
+}
+
+.c-plan:hover {
+    @media (hover: hover) {
+        box-shadow: 0 3.75rem 4.125rem -.625rem rgb(13 16 37 / 6%);
+    }
+}
+
+.c-plan.is-active {
+    border-color: var(--green-2);
+}
+
+.c-plan__media {
+    margin-bottom: 3.75rem;
+}
+
+.c-plan__title {
+    margin-bottom: 1.875rem;
+
+    font-size: var(--typo-18);
+}
+
+.c-plan__features {
+    margin-bottom: 3.125rem;
+
+    line-height: 2.14;
+    color: var(--grey-1);
+}
+
+.c-plan__price {
+    margin: auto 0 1.25rem;
+
+    font-size: var(--typo-25);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--dark-blue-1);
+}
+
+.c-plan__feature:not(:last-child) {
+    margin-bottom: .625rem;
+}
+
+.c-plan__price-suffix {
+    font-weight: 400;
+    color: var(--grey-1);
+}

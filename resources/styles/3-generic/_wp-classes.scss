@@ -1,0 +1,129 @@
+/* =WordPress Core
+-------------------------------------------------------------- */
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+
+    margin: 5px auto;
+}
+
+.alignright {
+    float: right;
+
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.wp-caption {
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+
+    text-align: center;
+
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    width: auto;
+    max-width: 98.5%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    margin: 0;
+    padding: 0 4px 5px;
+
+    font-size: var(--typo-11);
+    text-align: right;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    position: absolute !important;
+
+    overflow: hidden;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    word-wrap: normal !important;
+
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    border: 0;
+}
+
+.screen-reader-text:focus {
+    z-index: 100000;
+    top: 5px;
+    left: 5px;
+
+    display: block;
+
+    width: auto;
+    height: auto;
+    padding: 15px 23px 14px;
+
+    font-size: 1em;
+    line-height: normal;
+    color: #444444;
+    text-decoration: none;
+
+    background-color: #EEEEEE;
+    clip: auto !important;
+    clip-path: none;
+
+    /* Above WP toolbar. */
+}

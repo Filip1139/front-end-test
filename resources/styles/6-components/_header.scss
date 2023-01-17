@@ -1,0 +1,16 @@
+.c-header {
+    display: inline-flex;
+    justify-content: space-between;
+
+    width: 100%;
+    padding-top: 2rem;
+
+    @include media(md) {
+        padding-top: 3.5rem;
+    }
+}
+
+.c-header__logo {
+    font-size: var(--typo-20);
+    font-weight: 700;
+}

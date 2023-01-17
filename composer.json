@@ -40,6 +40,7 @@
   },
   "require": {
     "php": "^7.4|^8.0",
+    "log1x/sage-directives": "^1.1",
     "roots/acorn": "^2.1"
   },
   "require-dev": {
@@ -67,5 +68,8 @@
         "App\\Providers\\ThemeServiceProvider"
       ]
     }
-  }
+  },
+  "post-autoload-dump": [
+    "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+  ]
 }

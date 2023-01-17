@@ -1,0 +1,62 @@
+/* stylelint-disable */
+
+$bootstrapBreakpoints: (
+    0: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    2xl: 1400px,
+    3xl: 1919px,
+    4xl: 2559px,
+
+);
+
+@mixin media($minWidth, $maxWidth: null, $orientation: null) {
+    // if $minWidth is not a number, use breakpoint
+
+    // @if type-of($minWidth) != number {
+
+    // }
+    $minWidth: map-get($bootstrapBreakpoints, $minWidth);
+
+    // if $minWidth still is not a number, return warn
+    @if type-of($minWidth) != number {
+        @warn 'Unfortunately, no find breakpoint value.' + ' Please make sure it is defined in `$breakpoints` map.';
+    }
+
+    @if $maxWidth != null {
+        $maxWidth: map-get($bootstrapBreakpoints, $maxWidth);
+
+        @if $orientation != null {
+            @if orientation($orientation) {
+                @media (min-width: $minWidth) and (max-width: $maxWidth - 1px) and (orientation: $orientation) {
+                    @content;
+                }
+            }
+
+            @else {
+                @warn 'Unfortunately, no find orientation \'#{$orientation}\'.' + ' Please use \'portrait\' or \'landscape\' value.';
+            }
+        }
+
+        @else {
+            @media (min-width: $minWidth) and (max-width: $maxWidth - 1px) {
+                @content;
+            }
+        }
+    }
+
+    @else {
+
+        @if $minWidth != 0 {
+            @media (min-width: $minWidth) {
+                @content;
+            }
+        }
+
+        @else {
+            @content;
+        }
+    }
+}

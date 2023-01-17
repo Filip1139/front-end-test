@@ -20,8 +20,20 @@
   },
   "devDependencies": {
     "@roots/bud": "6.6.9",
+    "@roots/bud-eslint": "^6.6.9",
+    "@roots/bud-prettier": "^6.6.9",
     "@roots/bud-sass": "6.6.9",
-    "@roots/sage": "6.6.9"
+    "@roots/eslint-config": "^6.6.9",
+    "@roots/sage": "6.6.9",
+    "stylelint": "^14.9.1",
+    "stylelint-config-clean-order": "^0.8.0",
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "normalize.css": "^8.0.1"
+  }
 }

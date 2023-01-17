@@ -57,7 +57,10 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'primary_navigation' => __('Primary Navigation', 'Recruitment'),
+        'footer_navigation_1' => __('Footer Navigation 1', 'Recruitment'),
+        'footer_navigation_2' => __('Footer Navigation 2', 'Recruitment'),
+        'footer_navigation_3' => __('Footer Navigation 3', 'Recruitment'),
     ]);
 
     /**
@@ -109,7 +112,28 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#customize-selective-refresh-widgets
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    // Add theme support for Custom Logo.
+    add_theme_support( 'custom-logo', array(
+        'width'       => 150,
+        'height'      => 30,
+        'flex-width'  => true,
+    ) );
+
 }, 20);
+
+
+
+add_action( 'init', function () {
+    remove_post_type_support( 'page', 'editor' );
+} );
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+
+}
+
 
 /**
  * Register the theme sidebars.

@@ -1,0 +1,112 @@
+.c-btn {
+    @include transition;
+
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    height: 3.125rem;
+    padding: 0 4rem;
+
+    font-size: var(--typo-16);
+    font-weight: 700;
+
+    border: 2px solid transparent;
+    border-radius: var(--radius-base);
+
+    transition-property: background-color, color, border-color;
+
+    @include media(md) {
+        height: 3.75rem;
+        padding: 0 4.875rem;
+    }
+}
+
+.c-btn__label {
+    @include transition;
+
+    position: relative;
+
+    overflow: hidden;
+    display: inline-block;
+
+    transition-property: transform;
+}
+
+.c-btn__label--hidden {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.c-btn:hover .c-btn__label {
+    transform: translateY(-100%);
+}
+
+.c-btn__labels {
+    @include flex-center
+;
+
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.c-btn--primary {
+    @media (hover: hover) {
+
+        &:hover {
+            background-color: var(--white-1);
+            border-color: var(--green-2);
+        }
+    }
+
+    background-color: var(--green-1);
+}
+
+.c-btn--primary::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, 40%);
+
+    width: 85%;
+    height: 85%;
+
+    background: rgb(0 255 0 / 40%);
+    filter: blur(1.625rem);
+    border-radius: var(--radius-base);
+}
+
+button.c-btn {
+    cursor: pointer;
+
+    outline: none;
+}
+
+.c-btn--secondary {
+    height: 2.8125rem;
+
+    color: var(--green-2);
+
+    background-color: transparent;
+    border-color: var(--green-1);
+    border-radius: var(--radius-lg);
+}
+
+.is-active .c-btn--secondary {
+    color: var(--dark-blue-1);
+
+    background-color: var(--green-1);
+}
+
+.is-active .c-btn .c-btn__label {
+    transform: translateY(-100%);
+}
