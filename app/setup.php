@@ -114,12 +114,15 @@ add_action('after_setup_theme', function () {
     add_theme_support('customize-selective-refresh-widgets');
 
     // Add theme support for Custom Logo.
-	add_theme_support( 'custom-logo', array(
-		'width'       => 150,
-		'height'      => 30,
-		'flex-width'  => true,
-	) );
+    add_theme_support( 'custom-logo', array(
+        'width'       => 150,
+        'height'      => 30,
+        'flex-width'  => true,
+    ) );
+
 }, 20);
+
+
 
 add_action( 'init', function () {
     remove_post_type_support( 'page', 'editor' );
@@ -130,3 +133,28 @@ if( function_exists('acf_add_options_page') ) {
     acf_add_options_page();
 
 }
+
+
+/**
+ * Register the theme sidebars.
+ *
+ * @return void
+ */
+add_action('widgets_init', function () {
+    $config = [
+        'before_widget' => '<section class="widget %1$s %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ];
+
+    register_sidebar([
+        'name' => __('Primary', 'sage'),
+        'id' => 'sidebar-primary',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Footer', 'sage'),
+        'id' => 'sidebar-footer',
+    ] + $config);
+});
