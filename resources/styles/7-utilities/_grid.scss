@@ -1,7 +1,7 @@
 .u-grid {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    column-gap: var(--gutter);
+    column-gap: var(--gap);
 }
 
 .u-grid--full-width {
@@ -13,7 +13,7 @@
                 calc(
                     (
                         (var(--container-max-width) - (var(--container-padding) * 2)) -
-                        ((12 - 1) * var(--gutter))
+                        ((12 - 1) * var(--gap))
                     ) / 12
                 )
             )
