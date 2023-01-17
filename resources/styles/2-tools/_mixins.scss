@@ -1,4 +1,4 @@
-@mixin transition($time: 200ms, $easing: ease-in-out) {
+@mixin transition($time: 300ms, $easing: var(--at-easing-in)) {
     transition-timing-function: $easing;
     transition-duration: $time;
 }

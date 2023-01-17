@@ -5,7 +5,6 @@
 
     display: inline-flex;
     align-items: center;
-    justify-content: center;
 
     height: 3.125rem;
     padding: 0 4rem;
@@ -24,7 +23,49 @@
     }
 }
 
+.c-btn__label {
+    @include transition;
+
+    position: relative;
+
+    overflow: hidden;
+    display: inline-block;
+
+    transition-property: transform;
+}
+
+.c-btn__label--hidden {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.c-btn:hover .c-btn__label {
+    transform: translateY(-100%);
+}
+
+.c-btn__labels {
+    @include flex-center
+;
+
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
 .c-btn--primary {
+    @media (hover: hover) {
+
+        &:hover {
+            background-color: var(--white-1);
+            border-color: var(--green-2);
+        }
+    }
+
     background-color: var(--green-1);
 }
 
@@ -64,4 +105,8 @@ button.c-btn {
     color: var(--dark-blue-1);
 
     background-color: var(--green-1);
+}
+
+.is-active .c-btn .c-btn__label {
+    transform: translateY(-100%);
 }

@@ -1,6 +1,6 @@
 <section class="o-section">
   <div class="o-container">
-    <div class="c-stats">
+    <div class="c-stats" data-aos="fade-up">
       @notempty($stats_list)
       <ul class="c-stats__list">
 

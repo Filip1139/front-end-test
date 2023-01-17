@@ -22,6 +22,6 @@
     @endif
 
     <div class="c-plan__action">
-      <button class="c-btn c-btn--secondary c-btn--rounded-lg js-select-plan">{{ __('Select', 'Recruitment') }}</button>
+      <x-button as="button" type="secondary" :title="__('Select', 'Recruitment')" />
     </div>
 </div>
